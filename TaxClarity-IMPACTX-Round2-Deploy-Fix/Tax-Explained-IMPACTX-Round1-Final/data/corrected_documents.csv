@@ -1,2 +1,0 @@
-old_record_id,new_record_id,source_label,tax_period,old_salary_income,new_salary_income,old_tds_amount,new_tds_amount,correction_reason,version_status
-EMP-B-001,EMP-B-002,Demo Employer B,FY2025-26,420000,445000,28000,30000,Corrected annual statement issued by fictional employer,SUPERSEDES_OLD_VERSION
