@@ -1,0 +1,2 @@
+record_id,source_label,tax_period,salary_income,interest_income,tds_amount,source_status
+PREFILL-001,Prefilled Demo Summary,FY2025-26,1270000,7000,91000,SYNTHETIC_DEMO
