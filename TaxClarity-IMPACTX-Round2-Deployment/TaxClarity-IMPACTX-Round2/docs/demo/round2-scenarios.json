@@ -1,0 +1,67 @@
+{
+  "notice": "Fictional data only. All tax-rule simulator values must be labelled synthetic unless using the separately scoped official AY 2026-27 estimator.",
+  "scenarios": [
+    {
+      "id": "A",
+      "name": "Matching records",
+      "expected": "No finding when payer, reference, period, category and amount match."
+    },
+    {
+      "id": "B",
+      "name": "Conflicting income values",
+      "values": {
+        "sourceA": 840000,
+        "sourceB": 825000,
+        "difference": 15000
+      },
+      "expected": "Display \u20b915,000 difference and ask the user to verify source evidence."
+    },
+    {
+      "id": "C",
+      "name": "Corrected employer statement",
+      "versions": [
+        {
+          "id": "original",
+          "amount": 840000
+        },
+        {
+          "id": "corrected",
+          "amount": 825000,
+          "supersedes": "original"
+        }
+      ],
+      "expected": "Preserve both versions and allow restoring the original."
+    },
+    {
+      "id": "D",
+      "name": "Missing deduction evidence",
+      "claim": 50000,
+      "evidencePresent": false,
+      "expected": "Mark evidence as required; do not auto-accept claim."
+    },
+    {
+      "id": "E",
+      "name": "Invalid or duplicate data",
+      "expected": "Flag duplicates and reject negative/non-finite amounts."
+    },
+    {
+      "id": "F",
+      "name": "Tax regime comparison",
+      "assessmentYear": "AY 2026-27",
+      "expected": "Show scoped new/old regime estimate, source date and limitations."
+    },
+    {
+      "id": "G",
+      "name": "Rule update",
+      "from": "SYNTH-V1",
+      "to": "SYNTH-V2",
+      "expected": "Compare synthetic versions without overwriting prior result."
+    },
+    {
+      "id": "H",
+      "name": "Failure recovery",
+      "failure": "PARSER_UNAVAILABLE",
+      "expected": "Show error, retain manual input and offer retry/manual entry."
+    }
+  ]
+}

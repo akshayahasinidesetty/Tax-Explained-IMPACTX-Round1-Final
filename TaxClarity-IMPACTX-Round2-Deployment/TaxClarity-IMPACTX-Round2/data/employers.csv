@@ -1,0 +1,4 @@
+record_id,employer_label,document_version,tax_period,document_type,issue_date,salary_income,tds_amount,status
+EMP-A-001,Demo Employer A,v1,FY2025-26,FORM16,2026-06-15,850000,65000,ACTIVE
+EMP-B-001,Demo Employer B,v1,FY2025-26,FORM16,2026-06-10,420000,28000,SUPERSEDED
+EMP-B-002,Demo Employer B,v2,FY2025-26,FORM16,2026-07-02,445000,30000,ACTIVE
